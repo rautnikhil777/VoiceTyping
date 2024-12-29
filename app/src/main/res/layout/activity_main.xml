@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/start_bg"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Different Languages!"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/icon200"
+        app:layout_constraintBottom_toTopOf="@+id/start_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/start_btn"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:background="@drawable/start_btn_bg"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/share"
+        app:layout_constraintEnd_toStartOf="@+id/more_apps"
+        app:layout_constraintTop_toTopOf="@+id/share">
+
+        <ImageView
+            android:id="@+id/rate_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rate"
+            app:layout_constraintEnd_toEndOf="@+id/rate_us"
+            app:layout_constraintStart_toStartOf="@+id/rate_us"
+            app:layout_constraintTop_toTopOf="@+id/rate_us" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Rate Us"
+            android:textColor="@color/purple_700"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/rate_us"
+            app:layout_constraintStart_toStartOf="@+id/rate_us"
+            app:layout_constraintTop_toBottomOf="@+id/rate_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/more_apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/start_btn"
+        app:layout_constraintStart_toStartOf="@+id/start_btn"
+        app:layout_constraintTop_toBottomOf="@+id/start_btn">
+
+        <ImageView
+            android:id="@+id/more_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/more"
+            app:layout_constraintEnd_toEndOf="@+id/more_apps"
+            app:layout_constraintStart_toStartOf="@+id/more_apps"
+            app:layout_constraintTop_toTopOf="@+id/more_apps" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="More App"
+            android:textColor="@color/purple_700"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/more_apps"
+            app:layout_constraintStart_toStartOf="@+id/more_apps"
+            app:layout_constraintTop_toBottomOf="@+id/more_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/more_apps"
+        app:layout_constraintStart_toEndOf="@+id/more_apps"
+        app:layout_constraintTop_toTopOf="@+id/more_apps"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/share_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/share_main"
+            app:layout_constraintEnd_toEndOf="@+id/share"
+            app:layout_constraintStart_toStartOf="@+id/share"
+            app:layout_constraintTop_toTopOf="@+id/share" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Share"
+            android:textColor="@color/purple_700"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/share_img"
+            app:layout_constraintStart_toStartOf="@+id/share_img"
+            app:layout_constraintTop_toBottomOf="@+id/share_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
